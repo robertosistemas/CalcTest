@@ -14,7 +14,7 @@ namespace CalcTest.WebApi.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return "https://github.com/robertosistemas/RepositorioTeste01";
+            return "https://github.com/robertosistemas/CalcTest";
         }
 
     }
