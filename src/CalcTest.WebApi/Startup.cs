@@ -61,14 +61,13 @@ namespace CalcTest.WebApi
             }
             else
             {
-                app.UseHsts();
+                //app.UseHsts();
             }
 
+            //app.UseHttpsRedirection();
+
             // https://stackoverflow.com/questions/44379560/how-to-enable-cors-in-asp-net-core-webapi
-
             app.UseCors("AllowAllOrigin");
-
-            app.UseHttpsRedirection();
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
