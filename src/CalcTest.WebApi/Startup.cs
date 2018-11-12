@@ -29,7 +29,15 @@ namespace CalcTest.WebApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigin",
+                    builder => builder
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin()
+                        .AllowCredentials());
+            });
 
             services.AddTransient<ICalculadoraService, CalculadoraService>();
             services.AddTransient<ICalculadoraFinanceiraService, CalculadoraFinanceiraService>();
@@ -50,7 +58,7 @@ namespace CalcTest.WebApi
 
             // https://stackoverflow.com/questions/44379560/how-to-enable-cors-in-asp-net-core-webapi
 
-            app.UseCors("*");
+            app.UseCors("AllowAllOrigin");
 
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -59,11 +59,11 @@
         };
 
         vm.mostrarDados = function () {
-            return vm.consultou && vm.Juros && vm.Juros > 0;
+            return vm.consultou && vm.Resultado && vm.Resultado.length > 0;
         };
 
         vm.mostrarMsg = function () {
-            return vm.consultou && (!vm.Juros || vm.Juros <= 0);
+            return vm.consultou && (!vm.Resultado || vm.Resultado.length <= 0);
         };
 
     }
