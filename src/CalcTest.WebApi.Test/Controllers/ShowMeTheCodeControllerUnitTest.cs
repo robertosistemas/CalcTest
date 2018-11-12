@@ -3,7 +3,7 @@
 namespace CalcTest.WebApi.Controllers
 {
     [TestClass]
-    public class ShowMeTheCodeControllerUnitTest : BaseUnitTest
+    public class ShowMeTheCodeControllerUnitTest : BaseWebApiUnitTest
     {
 
         [TestMethod]

@@ -6,7 +6,7 @@ namespace CalcTest.WebApi.Controllers
 {
 
     [TestClass]
-    public class CalculaJurosControllerUnitTest : BaseUnitTest
+    public class CalculaJurosControllerUnitTest : BaseWebApiUnitTest
     {
 
         [TestMethod]

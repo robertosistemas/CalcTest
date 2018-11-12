@@ -1,14 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CalcTest.Web.Services
 {
 
     [TestClass]
-    public class CalculadoraHttpServiceUnitTest
+    public class CalculadoraHttpServiceUnitTest: BaseWebUnitTest
     {
 
         [TestMethod]
