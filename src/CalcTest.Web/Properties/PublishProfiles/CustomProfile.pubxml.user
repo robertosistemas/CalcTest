@@ -17,25 +17,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/12/2018 09:53:31</publishTime>
     </File>
     <File Include="CalcTest.Web.deps.json">
-      <publishTime>11/12/2018 11:58:59</publishTime>
+      <publishTime>11/12/2018 13:33:08</publishTime>
     </File>
     <File Include="CalcTest.Web.dll">
-      <publishTime>11/12/2018 11:58:51</publishTime>
+      <publishTime>11/12/2018 13:29:37</publishTime>
     </File>
     <File Include="CalcTest.Web.pdb">
-      <publishTime>11/12/2018 11:58:51</publishTime>
+      <publishTime>11/12/2018 13:29:37</publishTime>
     </File>
     <File Include="CalcTest.Web.runtimeconfig.json">
-      <publishTime>11/12/2018 11:58:59</publishTime>
+      <publishTime>11/12/2018 13:33:08</publishTime>
     </File>
     <File Include="CalcTest.Web.Views.dll">
-      <publishTime>11/12/2018 11:58:53</publishTime>
+      <publishTime>11/12/2018 13:29:38</publishTime>
     </File>
     <File Include="CalcTest.Web.Views.pdb">
-      <publishTime>11/12/2018 11:58:53</publishTime>
+      <publishTime>11/12/2018 13:29:38</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/12/2018 11:58:59</publishTime>
+      <publishTime>11/12/2018 13:33:08</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>11/12/2018 09:53:31</publishTime>
