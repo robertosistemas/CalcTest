@@ -1,0 +1,89 @@
+﻿@page
+@namespace CalcTest.Web.Areas.Spa.Pages
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page - SPA";
+}
+<h2>Cálculo de juros compostos - Single Page Application</h2>
+<hr />
+<div ng-app="SpaApp" ng-controller="SpaController as vm">
+    <form method="post" class="form-inline" name="SpaForm">
+        <div class="row">
+            <div class="col-md-12">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>&nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Calculo.ValorInicial" class="control-label"></label>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input asp-for="Calculo.ValorInicial" class="form-control" required placeholder="Valor inicial" ng-model="vm.ValorInicial" />
+                    <span asp-validation-for="Calculo.ValorInicial" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Calculo.Meses" class="control-label"></label>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input asp-for="Calculo.Meses" class="form-control" required placeholder="Mêses" ng-model="vm.Meses" />
+                    <span asp-validation-for="Calculo.Meses" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                &nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input type="button" value="Pesquisar" class="btn btn-primary" ng-disabled="!vm.ValorInicial || !vm.Meses" ng-click="vm.getJuros(vm.ValorInicial, vm.Meses)" />
+                    <i class="fa fa-spinner fa-spin ng-cloak" ng-show="vm.loading" style="font-size:24px"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row"><hr /></div>
+    </form>
+    <div class="row ng-cloak" ng-show="vm.mostrarDados()">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Resultado
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span ng-bind="vm.Juros"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row ng-cloak" ng-show="vm.mostrarMsg()">
+        <div class="col-md-12">Não foi possível calcular o juros para as informações fornecidas</div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{await Html.RenderPartialAsync("_SpaAngularPartial");}
+}

@@ -30,9 +30,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Index" asp-area="">Home</a></li>
+                    <li><a asp-page="/About" asp-area="">Sobre</a></li>
+                    <li><a asp-page="/Contact" asp-area="">Contato</a></li>
+                    <li><a asp-page="/Index" asp-area="Mpa">Cálculo Juros (MPA)</a></li>
+                    <li><a asp-page="/Index" asp-area="Spa">Cálculo Juros (SPA)</a></li>
                 </ul>
             </div>
         </div>
@@ -51,6 +53,7 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/angularjs/dist/angular.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
@@ -65,6 +68,11 @@
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"
+                asp-fallback-src="~/lib/angularjs/dist//angular.min.js"
+                asp-fallback-test="(function() { try { window.angular.module('ngRoute'); return true; } catch(e) { return false; } })()"
+                crossorigin="anonymous">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
