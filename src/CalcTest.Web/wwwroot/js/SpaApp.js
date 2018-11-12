@@ -38,8 +38,8 @@
 
         vm.loading = false;
         vm.consultou = false;
-        vm.ValorInicial = 0;
-        vm.Meses = 0;
+        vm.ValorInicial = "";
+        vm.Meses = "";
         vm.Resultado = "";
 
         vm.getJuros = function (valorInicial, meses) {

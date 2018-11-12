@@ -5,3 +5,5 @@ I open Docker CLI as an administrator and just move to the project directory and
 1-dotnet restore
 2-dotnet build
 3-dotnet run
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
