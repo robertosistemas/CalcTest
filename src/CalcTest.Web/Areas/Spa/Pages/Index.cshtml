@@ -52,7 +52,7 @@
             </div>
             <div class="col-md-8">
                 <div class="form-group">
-                    <input type="button" value="Pesquisar" class="btn btn-primary" ng-disabled="!vm.ValorInicial || !vm.Meses" ng-click="vm.getJuros(vm.ValorInicial, vm.Meses)" />
+                    <input type="button" value="Calcular Juros Compostos" class="btn btn-primary" ng-disabled="!vm.ValorInicial || !vm.Meses" ng-click="vm.getJuros(vm.ValorInicial, vm.Meses)" />
                     <i class="fa fa-spinner fa-spin ng-cloak" ng-show="vm.loading" style="font-size:24px"></i>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <span ng-bind="vm.Juros"></span>
+                            <span ng-bind="vm.Resultado"></span>
                         </td>
                     </tr>
                 </tbody>
