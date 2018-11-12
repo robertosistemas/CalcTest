@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CalcTest.Core\CalcTest.Core.csproj" />
     <ProjectReference Include="..\CalcTest.Web\CalcTest.Web.csproj" />
   </ItemGroup>
 
