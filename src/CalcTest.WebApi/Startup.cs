@@ -48,6 +48,10 @@ namespace CalcTest.WebApi
                 app.UseHsts();
             }
 
+            // https://stackoverflow.com/questions/44379560/how-to-enable-cors-in-asp-net-core-webapi
+
+            app.UseCors("*");
+
             app.UseHttpsRedirection();
             app.UseMvc();
         }
