@@ -15,15 +15,15 @@ namespace CalcTest.Web.Areas.Mpa.Pages
 
         public bool Pesquisado { get; private set; }
 
-        public IndexModel(ICalculadoraHttpService footballService)
+        public IndexModel(ICalculadoraHttpService calculadoraHttpService)
         {
-            _calculadoraHttpService = footballService;
+            _calculadoraHttpService = calculadoraHttpService;
         }
 
         public async Task OnPostAsync()
         {
             Pesquisado = true;
-            this.Calculo.Resultado = await _calculadoraHttpService.CalcularJuros(Calculo.ValorInicial.Value, Calculo.Meses.Value);
+            this.Calculo.Resultado = await _calculadoraHttpService.CalcularJurosAsync(Calculo.ValorInicial.Value, Calculo.Meses.Value);
         }
 
     }

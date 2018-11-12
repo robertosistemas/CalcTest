@@ -27,7 +27,7 @@ namespace CalcTest.Web.Services
         /// <param name="valorInicial"></param>
         /// <param name="meses"></param>
         /// <returns></returns>
-        public async Task<string> CalcularJuros(double valorInicial, int meses)
+        public async Task<string> CalcularJurosAsync(double valorInicial, int meses)
         {
             var urlCalcularJuros = string.Concat(_urlBase, $"/calculajuros?valorinicial={valorInicial}&meses={meses}");
             return await GetResource<string>(urlCalcularJuros);

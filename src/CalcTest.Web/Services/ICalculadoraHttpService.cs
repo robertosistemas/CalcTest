@@ -7,6 +7,6 @@ namespace CalcTest.Web.Services
 {
     public interface ICalculadoraHttpService
     {
-        Task<string> CalcularJuros(double valorInicial, int meses);
+        Task<string> CalcularJurosAsync(double valorInicial, int meses);
     }
 }
