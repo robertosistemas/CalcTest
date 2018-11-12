@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CalcTest.Application.Services
 {
     [TestClass]
-    public class CalculadoraFinanceiraServiceUnitTest: BaseUnitTest
+    public class CalculadoraFinanceiraServiceUnitTest: BaseApplicationUnitTest
     {
         [TestMethod]
         public void Quando_Executado_Retorna_Calculo_Juros_Composto()

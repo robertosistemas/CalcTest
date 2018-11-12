@@ -3,7 +3,7 @@
 namespace CalcTest.Core.Domains
 {
     [TestClass]
-    public class CalculoUnitTest : BaseUnitTest
+    public class CalculoUnitTest : BaseCoreUnitTest
     {
         [TestMethod]
         public void Quando_Executado_Retorna_Calculo_Juros_Composto()

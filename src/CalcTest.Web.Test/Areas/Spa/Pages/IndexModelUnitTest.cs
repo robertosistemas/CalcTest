@@ -3,7 +3,7 @@
 namespace CalcTest.Web.Areas.Spa.Pages
 {
     [TestClass]
-    public class IndexModelUnitTest
+    public class IndexModelUnitTest: BaseWebUnitTest
     {
         [TestMethod]
         public void Quando_Executado_cria_instancia_classe_IndexModel()

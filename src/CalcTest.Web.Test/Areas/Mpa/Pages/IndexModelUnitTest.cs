@@ -1,14 +1,11 @@
 ﻿using CalcTest.Web.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CalcTest.Web.Areas.Mpa.Pages
 {
     [TestClass]
-    public class IndexModelUnitTest
+    public class IndexModelUnitTest: BaseWebUnitTest
     {
         [TestMethod]
         public async Task Quando_Executado_Retorna_Calculo_Juros_Composto()
