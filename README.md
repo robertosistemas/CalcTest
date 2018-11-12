@@ -31,7 +31,6 @@ Utilizar swagger
 ### Web Site para testar integração:
 
 - http://robertosistemasg-001-site1.itempurl.com/
-  http://robertosistemasg-001-site1.itempurl.com/
 
 
 ### Web API:
