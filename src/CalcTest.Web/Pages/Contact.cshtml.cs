@@ -12,7 +12,7 @@ namespace CalcTest.Web.Pages
 
         public void OnGet()
         {
-            Message = "Your contact page.";
+            Message = "Para entrar em contato com desenvolvedor.";
         }
     }
 }

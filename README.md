@@ -1,9 +1,25 @@
-﻿# CalcTest
+﻿### CalcTest
 
-Sistema para cálculo de juros compostos
+## Sistema para cálculo de juros compostos
+
+# Alguns recursos utilizados:
+
+- Visual Studio 2017 - Versão 15.8.8
+- .NET Framework Core 2.1
+- Docker
+- C#
+- Orientação a Objeto
+- SOLID
+- TDD
+- DDD
+- Injeção de Dependência
+- Razor
+- AngularJs
+- Web Api
+- Swagger
 
 
-Foi implementado uma API com dois endpoints:
+### Foi implementado uma API com dois endpoints:
 
 1) Calcula Juros
 A primeira reponde pelo path relativo "/calculajuros"
@@ -31,7 +47,6 @@ Utilizar swagger
 ### Web Site para testar integração:
 
 - http://robertosistemasg-001-site1.itempurl.com/
-  http://robertosistemasg-001-site1.itempurl.com/
 
 
 ### Web API:
