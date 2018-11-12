@@ -1,0 +1,99 @@
+﻿@page
+@namespace CalcTest.Web.Areas.Mpa.Pages
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page - MPA";
+}
+<h2>Cálculo de juros compostos - Multiple Page Application</h2>
+<hr />
+<div>
+    <form method="post" class="form-inline">
+        <div class="row">
+            <div class="col-md-12">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>&nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Calculo.ValorInicial" class="control-label"></label>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input asp-for="Calculo.ValorInicial" class="form-control" required placeholder="Valor inicial" />
+                    <span asp-validation-for="Calculo.ValorInicial" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Calculo.Meses" class="control-label"></label>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input asp-for="Calculo.Meses" class="form-control" required placeholder="Mêses" />
+                    <span asp-validation-for="Calculo.Meses" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                &nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input type="submit" value="Pesquisar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+        <div class="row"><hr /></div>
+    </form>
+
+    @if (Model.Calculo != null && !string.IsNullOrWhiteSpace(Model.Calculo.Resultado))
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Calculo.Resultado)
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.Calculo.Resultado)
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        if (Model.Pesquisado)
+        {
+            <div class="row">
+                <div class="col-md-12">Não foi possível calcular o juros para as informações fornecidas</div>
+            </div>
+        }
+    }
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

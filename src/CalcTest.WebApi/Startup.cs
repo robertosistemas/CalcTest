@@ -29,6 +29,8 @@ namespace CalcTest.WebApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddCors();
+
             services.AddTransient<ICalculadoraService, CalculadoraService>();
             services.AddTransient<ICalculadoraFinanceiraService, CalculadoraFinanceiraService>();
 

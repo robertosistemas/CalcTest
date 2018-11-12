@@ -14,7 +14,7 @@ namespace CalcTest.WebApi.Controllers
             //Act
             var resultado = calculaJurosController.Get().Value;
             //Assert
-            Assert.AreEqual(resultado, "https://github.com/robertosistemas/RepositorioTeste01");
+            Assert.AreEqual(resultado, "https://github.com/robertosistemas/CalcTest");
         }
 
     }
