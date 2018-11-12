@@ -6,7 +6,15 @@
 
     // Configurações globais
 
-    //baseUrl: location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : ''),
+    //SpaApp.value('config', {
+    //    baseUrl: location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : ''),
+    //    timeout: -1
+    //});
+
+    //SpaApp.value('config', {
+    //    baseUrl: 'https://localhost:63271',
+    //    timeout: -1
+    //});
 
     SpaApp.value('config', {
         baseUrl: 'http://robertosistemas-001-site1.itempurl.com',
