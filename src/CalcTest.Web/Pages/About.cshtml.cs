@@ -12,7 +12,7 @@ namespace CalcTest.Web.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page.";
+            Message = "Sistema para cálculo de juros compostos.";
         }
     }
 }
