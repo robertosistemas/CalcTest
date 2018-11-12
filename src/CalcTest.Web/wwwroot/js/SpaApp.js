@@ -20,7 +20,7 @@
     ///CalculaJuros?valorinicial=100&meses=5
     function SpaService($http, config) {
         var getJuros = function (valorInicial, meses) {
-            return $http.get(config.baseUrl + '/calcularjuros?valorinicial=' + valorInicial + '&meses=' + meses, null, { timeout: config.timeout });
+            return $http.get(config.baseUrl + '/calculajuros?valorinicial=' + valorInicial + '&meses=' + meses, null, { timeout: config.timeout });
         };
         return {
             getJuros: getJuros
