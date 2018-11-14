@@ -33,7 +33,7 @@ Exemplo: /calculajuros?valorinicial=100&meses=5 Resultado esperado: 105,10
 2) Show me the code
 Este responde pelo path relativo /showmethecode Deverá retornar a url de onde encontra-se o fonte no github
 
-Esperamos que a entrega tenha
+Este exemplo de desenvolvimento tem:
 
 Código fonte em asp.net core no github (Mostrar conhecimento básico de git)
 Teste unitários (Mostrar conhecimento de testes unitários, se possível TDD)
