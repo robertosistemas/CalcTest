@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+  calctestweb:
+    image: calctestweb
+    build:
+      context: .
+      dockerfile: CalcTest.Web/Dockerfile
+    depends_on:
+      - "calctestwebapi"
+    networks:
+      - calctest-network
+
+  calctestwebapi:
+    image: calctestwebapi
+    build:
+      context: .
+      dockerfile: CalcTest.WebApi/Dockerfile
+    networks:
+      - calctest-network
+
+networks: 
+    calctest-network:
+        driver: bridge

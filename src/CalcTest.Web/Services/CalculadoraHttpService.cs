@@ -11,6 +11,12 @@ namespace CalcTest.Web.Services
         private readonly IHttpClientFactory _clientFactory;
         private readonly string _urlBase;
 
+        /// <summary>
+        /// http://robertosistemas-001-site1.itempurl.com
+        /// https://localhost:44317
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <param name="clientFactory"></param>
         public CalculadoraHttpService(IConfiguration configuration, IHttpClientFactory clientFactory)
         {
             _configuration = configuration;
@@ -41,6 +47,7 @@ namespace CalcTest.Web.Services
                 {
                     using (var response = await client.SendAsync(request))
                     {
+                        response.EnsureSuccessStatusCode();
                         if (response.IsSuccessStatusCode)
                         {
                             result = await response.Content.ReadAsAsync<T>();
