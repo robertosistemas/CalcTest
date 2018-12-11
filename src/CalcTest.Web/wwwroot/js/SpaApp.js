@@ -16,8 +16,13 @@
     //    timeout: -1
     //});
 
+    //SpaApp.value('config', {
+    //    baseUrl: 'http://robertosistemas-001-site1.itempurl.com',
+    //    timeout: -1
+    //});
+
     SpaApp.value('config', {
-        baseUrl: 'http://robertosistemas-001-site1.itempurl.com',
+        baseUrl: 'https://localhost:44317',
         timeout: -1
     });
 
